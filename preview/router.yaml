@@ -1,0 +1,3 @@
+# yaml-language-server: $schema=router.config.json
+connectors:
+    preview_connect_v0_2: true
