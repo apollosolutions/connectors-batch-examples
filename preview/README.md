@@ -8,7 +8,7 @@ deno run --allow-net=0.0.0.0:4001 --watch api.ts
 export APOLLO_KEY=<your api key>
 export APOLLO_GRAPH_REF=<your graph ref>
 export APOLLO_ROVER_DEV_ROUTER_VERSION=2.2.0-preview.0
-rover dev --supergraph-config batch.yaml --router-config router.yaml
+rover dev --supergraph-config supergraph.yaml --router-config router.yaml
 ```
 
 ```graphql
