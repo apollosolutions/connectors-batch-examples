@@ -4,6 +4,8 @@ Check out the different folders to see how entity batching works with Connectors
 
 * [Preview example using POST request bodies](./preview)
 
+## Trying it out during the preview
+
 During the preview, the following steps are required to try new features:
 
 1. Update the `@link` directives to point to `federation/v2.11` and `connect/v0.2`:
