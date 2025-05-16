@@ -26,6 +26,7 @@ type User
     source: "json"
     http: { GET: "/users-commas?ids={$batch.id->joinNotNull(',')}" }
     selection: "id name website"
+    batch: { maxSize: 5 }
   ) {
   id: ID!
   name: String

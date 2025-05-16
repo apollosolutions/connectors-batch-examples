@@ -22,14 +22,14 @@ During the preview, the following steps are required to try new features:
    connectors:
      preview_connect_v0_2: true
    ```
-3. Use Router v2.2.0-preview.0
+3. Use Router v2.3.0-preview.0
    ```sh
    export APOLLO_KEY=<your api key>
    export APOLLO_GRAPH_REF=<your graph ref>
    export APOLLO_ROVER_DEV_ROUTER_VERSION=2.3.0-preview.0
    rover dev --supergraph-config supergraph.yaml --router-config router.yaml
    ```
-4. Use Federation 2.11.0-preview.0 for composition:
+4. Use Federation 2.11.0-preview.2 for composition:
    - In `supergraph.yaml`:
      ```yaml
      federation_version: =2.11.0-preview.2
