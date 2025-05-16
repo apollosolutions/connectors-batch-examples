@@ -7,7 +7,7 @@ deno run --allow-net=0.0.0.0:4001 --watch api.ts
 ```sh
 export APOLLO_KEY=<your api key>
 export APOLLO_GRAPH_REF=<your graph ref>
-export APOLLO_ROVER_DEV_ROUTER_VERSION=2.3.0-preview.2
+export APOLLO_ROVER_DEV_ROUTER_VERSION=2.3.0-preview.0
 rover dev --supergraph-config supergraph.yaml --router-config router.yaml
 ```
 
