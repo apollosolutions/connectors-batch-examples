@@ -16,8 +16,20 @@ type User
     source: "json"
     http: { POST: "/users-batch", body: "ids: $batch.id" }
     selection: "id name username"
+  )
+  @connect(
+    source: "json"
+    http: { GET: "/users-params", queryParams: "id: $batch.id" }
+    selection: "id name email"
+  )
+  @connect(
+    source: "json"
+    http: { GET: "/users-commas?ids={$batch.id->joinNotNull(',')}" }
+    selection: "id name website"
   ) {
   id: ID!
   name: String
   username: String
+  email: String
+  website: String
 }

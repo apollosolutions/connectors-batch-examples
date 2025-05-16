@@ -44,4 +44,28 @@ app.post("/api/users-batch", async (c) => {
   return c.json(users, 200);
 });
 
+app.get("/api/users-params", (c) => {
+  const allUsers = new Array(20).fill(0).map((_, i) => ({
+    id: i + 1,
+    name: `User ${i + 1}`,
+    email: `user_${i + 1}@example.com`,
+  }));
+
+  const ids = c.req.queries("id") ?? [];
+  const users = allUsers.filter((u) => ids.includes(`${u.id}`));
+  return c.json(users, 200);
+});
+
+app.get("/api/users-commas", (c) => {
+  const allUsers = new Array(20).fill(0).map((_, i) => ({
+    id: i + 1,
+    name: `User ${i + 1}`,
+    website: `https://user_${i + 1}.com`,
+  }));
+
+  const ids = (c.req.query("ids") ?? "").split(",").map((id) => id.trim());
+  const users = allUsers.filter((u) => ids.includes(`${u.id}`));
+  return c.json(users, 200);
+});
+
 Deno.serve({ port: 4001 }, app.fetch);
